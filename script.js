@@ -23,6 +23,7 @@ function onReady() {
 let attackPoints = 100;
 let healthPoints = 100;
 
+//Functions below initiate the state and render actions
 function arcaneSceptreAttack() {
   console.log('in arcane sceptre');
   //Attack function will generally...
@@ -30,6 +31,54 @@ function arcaneSceptreAttack() {
   const healthDamage = 14;
   //set the attack AP variable for that specific attack
   const attackCost = 12;
+  //update the state of global AP and HP variabes
+  attackPoints -= attackCost;
+  healthPoints -= healthDamage;
+  //included in this is running a check if it is neg, be 0
+  zeroFloorCheck();
+  //run a function to render the state onto the DOM
+  renderCurrentPoints();
+}
+
+function entangleAttack() {
+  console.log('in entangle');
+  //Attack function will generally...
+  //set the attack HP variable for that specific attack
+  const healthDamage = 9;
+  //set the attack AP variable for that specific attack
+  const attackCost = 23;
+  //update the state of global AP and HP variabes
+  attackPoints -= attackCost;
+  healthPoints -= healthDamage;
+  //included in this is running a check if it is neg, be 0
+  zeroFloorCheck();
+  //run a function to render the state onto the DOM
+  renderCurrentPoints();
+}
+
+function dragonBladeAttack() {
+  console.log('in dragonBlade');
+  //Attack function will generally...
+  //set the attack HP variable for that specific attack
+  const healthDamage = 47;
+  //set the attack AP variable for that specific attack
+  const attackCost = 38;
+  //update the state of global AP and HP variabes
+  attackPoints -= attackCost;
+  healthPoints -= healthDamage;
+  //included in this is running a check if it is neg, be 0
+  zeroFloorCheck();
+  //run a function to render the state onto the DOM
+  renderCurrentPoints();
+}
+
+function starFireAttack() {
+  console.log('in star fire');
+  //Attack function will generally...
+  //set the attack HP variable for that specific attack
+  const healthDamage = 25;
+  //set the attack AP variable for that specific attack
+  const attackCost = 33;
   //update the state of global AP and HP variabes
   attackPoints -= attackCost;
   healthPoints -= healthDamage;
