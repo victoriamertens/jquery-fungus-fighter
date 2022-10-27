@@ -5,14 +5,17 @@ $(document).ready(onReady);
 // Example:
 // let fungusHP = 100;
 
+// Make sure you check the index.html file!
+// There are lots of buttons and things ready for you to hook into here!
+
 function onReady() {
-    
-    // Make sure you check the index.html file! 
-    // There are lots of buttons and things ready for you to hook into here!
-    
-    
-    // 🧠 Remember
-    // - Handle events that ->
-    // - Updates state which is ->
-    // - Rendered to the DOM
+  //listen for arcane-scepter click, run arcaneSceptreAttack
+  //listen for entangle click, run entangleAttack
+  //listen for dragon-blade click, run dragonBladeAttack
+  //listen for star-fire click, run starFireAttack
 }
+
+// 🧠 Remember
+// - Handle events that ->
+// - Updates state which is ->
+// - Rendered to the DOM
