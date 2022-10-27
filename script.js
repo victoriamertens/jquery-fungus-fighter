@@ -60,10 +60,31 @@ function renderCurrentPoints() {
   //2. run a seperate function checkVictoryStatus to check if 0
   checkVictoryStatus();
 }
-//function checkVictoryStatus will be conditional to test 0
-//if AP 0, run renderUserWon
-//if HP 0, run renderFungusWon
 
+//function checkVictoryStatus will be conditional to test 0
+function checkVictoryStatus() {
+  //if AP 0, run renderUserWon
+  if (attackPoints === 0) {
+    console.log('user won');
+    renderUserWon();
+  }
+  //if HP 0, run renderFungusWon
+  if (healthPoints === 0) {
+    console.log('fungus won');
+    renderFungusWon();
+  }
+}
+
+//function renderFungusWon changes css class from walk to jump
+function renderFungusWon() {
+  $('.walk').removeClass();
+  $('#i-am-fungus').addClass('freaky-fungus dead');
+}
+//function renderUserWon changes css class from walk to dead
+function renderUserWon() {
+  $('.walk').removeClass();
+  $('#i-am-fungus').addClass('freaky-fungus jump');
+}
 // 🧠 Remember
 // - Handle events that ->
 // - Updates state which is ->
